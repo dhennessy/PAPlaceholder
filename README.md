@@ -6,10 +6,11 @@ It also provides a dummy view controller which automatically creates the placeho
 
 ![screen1](https://raw.github.com/dhennessy/PAPlaceholder/master/Screenshots/SplitView.png)
 
+Using this at the early stages of a project are particularly useful on iOS 7, where many of the system views (like the navigation bar or tab bar) are actually transparent and the content views extend behind them. The arrows on the PAPlaceholderView show the edges of the view so you can tell if the edges are where you expect them to be.
+
 ## Adding PAPlaceholder to your project
 
-The simplest way to add PAPlaceholder to your project is to use [CocoaPods](http://cocoapods.org). 
-Simply add the following line to your Podfile:
+The simplest way to add PAPlaceholder to your project is to use [CocoaPods](http://cocoapods.org).  Just add the following line to your Podfile:
 
 ```
 	pod 'PAPlaceholder'
@@ -40,8 +41,7 @@ Simply drag a UIView onto your view and then change its class to `PAPlaceholderV
 
 To hear about updates to this and other libraries follow me on Twitter ([@denishennessy](http://twitter.com/denishennessy)) or App.net ([@denishennessy](http://alpha.app.net/denishennessy)).
 
-If you encounter a bug or just thought of a terrific new feature, then opening a github issue is probably the best
-way to share it. Actually, the best way is to send me a pull request...
+If you encounter a bug or just thought of a terrific new feature, then opening a github issue is probably the best way to share it. Actually, the best way is to send me a pull request...
 
 For anything else, email always works: [denis@peerassembly.com](mailto:denis@peerassembly.com)
 
