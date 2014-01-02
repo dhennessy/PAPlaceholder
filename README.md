@@ -1,67 +1,37 @@
 # PAPlaceholder
 
-PAPasscode is a standalone view controller for iOS to allow a user to set, 
-enter or change a passcode. It's designed to mimic the behaviour in Settings.app
-while still allowing some customization. It includes a sample project which
-shows how it appears on iPhone and iPad devices.
+When you're working on a new app, sometimes it's easier to start with dummy views and slowly replace them as you implement their functionality. Rather than use a simple UIView for this, PAPlaceholder gives you a better looking placeholder view that shows its dimensions and an optional title.
 
-![screen1](https://raw.github.com/dhennessy/PAPasscode/master/Screenshots/SplitView.png)
+It also provides a dummy view controller which automatically creates the placeholder view. This is useful when you're using a _view controller container_ such as a `UITabBarController` or a `UISplitViewController`.
 
-Other features:
- *	Supports both simple (PIN-style) and regular passcodes
- *	Allows customization of title and prompts
- *  Animates screens left and right
- *	Requires ARC
+![screen1](https://raw.github.com/dhennessy/PAPlaceholder/master/Screenshots/SplitView.png)
 
-## Adding PAPasscode to your project
+## Adding PAPlaceholder to your project
 
-The simplest way to add PAPasscode to your project is to use [CocoaPods](http://cocoapods.org). 
+The simplest way to add PAPlaceholder to your project is to use [CocoaPods](http://cocoapods.org). 
 Simply add the following line to your Podfile:
 
 ```
-	pod 'PAPasscode'
+	pod 'PAPlaceholder'
 ```
 
-If you'd prefer to manually integrate it, simply copy `PAPasscode/*.{m,h}` and `Assets/*.png` 
-into your project.  Make sure you link with the QuartzCore framework.
+If you'd prefer to manually integrate it, simply copy `PAPlaceholder/*.{m,h}` into your project.
 
-## Asking the user to set a passcode
+## Creating a placeholder view in code
 
-First, implement the following delegate methods on your view controller:
+You can use PAPlaceholderView anywhere you could have used UIView. For example in `loadView`:
 
 ```objective-c
-- (void)PAPasscodeViewControllerDidCancel:(PAPasscodeViewController *)controller {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)PAPasscodeViewControllerDidSetPasscode:(PAPasscodeViewController *)controller {
-	// Do stuff with controller.passcode...
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (void)loadView {
+    self.view = [[PAPlaceholderView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 }
 ```
 
-Then invoke the view controller as follows:
+## Creating a placeholder view in a storyboard or XIB
 
-```objective-c
-    PAPasscodeViewController *passcodeViewController = [[PAPasscodeViewController alloc] initForAction:PasscodeActionSet];
-    passcodeViewController.delegate = self;
-    [self presentViewController:passcodeViewController animated:YES completion:nil];
-```
-
-The `initForAction:` allows you to specify the flow you'd like. Possible actions are:
- *   `PasscodeActionSet` - set a new passcode
- *   `PasscodeActionEnter` - enter an existing passcode
- *   `PasscodeActionChange` - change an existing passcode
-
-The included example project demonstrates the each of the flows.
+Simply drag a UIView onto your view and then change its class to `PAPlaceholderView`. Or drag on a UIViewController and change its class tp `PAPlaceholderViewController`. The included example project demonstrates this in a storyboard.
 
 ## Changelog
-
-### 0.3
- *  The `PAPasscodeViewControllerDidCancel:` delegate method is now optional. If missing, then the Cancel button will be removed.
-
-### 0.2
- *  Add property to specify custom background view
 
 ### 0.1 
  *  Initial release
@@ -75,10 +45,10 @@ way to share it. Actually, the best way is to send me a pull request...
 
 For anything else, email always works: [denis@peerassembly.com](mailto:denis@peerassembly.com)
 
-## License
+## License (BSD)
 
 ```
-Copyright (c) 2012, Denis Hennessy (Peer Assembly - http://peerassembly.com)
+Copyright (c) 2014, Denis Hennessy (Peer Assembly - http://peerassembly.com)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
