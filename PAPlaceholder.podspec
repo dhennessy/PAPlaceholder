@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'PAPlaceholder'
-  s.version  = '0.1'
+  s.version  = '0.2'
   s.summary  = 'A Passcode View Controller for iOS similar to the one in Settings.app'
   s.license  = 'BSD'
   s.homepage = 'https://github.com/dhennessy/PAPlaceholder'
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.source_files = 'PAPlaceholder'
-  s.osx.source_files = 'PAPlaceholder/PAPlaceholder.*'
+  s.osx.source_files = 'PAPlaceholder/PAPlaceholderView.*'
 end
