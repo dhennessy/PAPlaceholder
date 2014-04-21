@@ -7,7 +7,9 @@ Pod::Spec.new do |s|
   s.authors  = { 'Denis Hennessy' => 'denis@hennessynet.com' }
   s.source   = { :git => 'https://github.com/dhennessy/PAPlaceholder.git', :tag => s.version.to_s } 
   s.platform = :ios, '6.0'
+  s.platform = :osx, '10.8'
   s.requires_arc = true
 
-  s.source_files = 'PAPlaceholder'
+  s.ios.source_files = 'PAPlaceholder'
+  s.osx.source_files = 'PAPlaceholder/PAPlaceholder.*'
 end

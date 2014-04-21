@@ -5,8 +5,9 @@ When you're working on a new app, sometimes it's easier to start with dummy view
 It also provides a dummy view controller which automatically creates the placeholder view. This is useful when you're using a _view controller container_ such as a `UITabBarController` or a `UISplitViewController`.
 
 ![screen1](https://raw.github.com/dhennessy/PAPlaceholder/master/Screenshots/SplitView.png)
+![screen2](https://raw.github.com/dhennessy/PAPlaceholder/master/Screenshots/MacSplitView.png)
 
-Using this at the early stages of a project are particularly useful on iOS 7, where many of the system views (like the navigation bar or tab bar) are actually transparent and the content views extend behind them. The arrows on the PAPlaceholderView show the edges of the view so you can tell if the edges are where you expect them to be.
+Using this at the early stages of a project is particularly useful on iOS 7, where many of the system views (like the navigation bar or tab bar) are actually transparent and the content views extend behind them. The arrows on the PAPlaceholderView show the edges of the view so you can tell if the edges are where you expect them to be.
 
 ## Adding PAPlaceholder to your project
 
@@ -33,6 +34,9 @@ You can use PAPlaceholderView anywhere you could have used UIView. For example i
 Simply drag a UIView onto your view and then change its class to `PAPlaceholderView`. Or drag on a UIViewController and change its class tp `PAPlaceholderViewController`. The included example project demonstrates this in a storyboard.
 
 ## Changelog
+
+### 0.2
+ *  Support for Mac OS X added to PAPlaceholderView.*
 
 ### 0.1 
  *  Initial release

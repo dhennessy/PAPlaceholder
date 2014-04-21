@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92F3CCB519056F7400A9EF3D /* PAPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F3CCB219056F7400A9EF3D /* PAPlaceholderView.m */; };
+		92F3CCB619056F7400A9EF3D /* PAPlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F3CCB419056F7400A9EF3D /* PAPlaceholderViewController.m */; };
 		92FB3C5B1875DBF000DA5845 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FB3C5A1875DBF000DA5845 /* Foundation.framework */; };
 		92FB3C5D1875DBF000DA5845 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FB3C5C1875DBF000DA5845 /* CoreGraphics.framework */; };
 		92FB3C5F1875DBF000DA5845 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FB3C5E1875DBF000DA5845 /* UIKit.framework */; };
@@ -20,8 +22,6 @@
 		92FB3C7F1875DBF000DA5845 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92FB3C5E1875DBF000DA5845 /* UIKit.framework */; };
 		92FB3C871875DBF000DA5845 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92FB3C851875DBF000DA5845 /* InfoPlist.strings */; };
 		92FB3C891875DBF000DA5845 /* PAPlaceholder_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FB3C881875DBF000DA5845 /* PAPlaceholder_SampleTests.m */; };
-		92FB3C971875DC8D00DA5845 /* PAPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FB3C941875DC8D00DA5845 /* PAPlaceholderView.m */; };
-		92FB3C981875DC8D00DA5845 /* PAPlaceholderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92FB3C961875DC8D00DA5845 /* PAPlaceholderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92F3CCB119056F7400A9EF3D /* PAPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPlaceholderView.h; path = ../../PAPlaceholder/PAPlaceholderView.h; sourceTree = "<group>"; };
+		92F3CCB219056F7400A9EF3D /* PAPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPlaceholderView.m; path = ../../PAPlaceholder/PAPlaceholderView.m; sourceTree = "<group>"; };
+		92F3CCB319056F7400A9EF3D /* PAPlaceholderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPlaceholderViewController.h; path = ../../PAPlaceholder/PAPlaceholderViewController.h; sourceTree = "<group>"; };
+		92F3CCB419056F7400A9EF3D /* PAPlaceholderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPlaceholderViewController.m; path = ../../PAPlaceholder/PAPlaceholderViewController.m; sourceTree = "<group>"; };
 		92FB3C571875DBF000DA5845 /* PAPlaceholder Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PAPlaceholder Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FB3C5A1875DBF000DA5845 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92FB3C5C1875DBF000DA5845 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,10 +56,6 @@
 		92FB3C841875DBF000DA5845 /* PAPlaceholder SampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PAPlaceholder SampleTests-Info.plist"; sourceTree = "<group>"; };
 		92FB3C861875DBF000DA5845 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92FB3C881875DBF000DA5845 /* PAPlaceholder_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAPlaceholder_SampleTests.m; sourceTree = "<group>"; };
-		92FB3C931875DC8D00DA5845 /* PAPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPlaceholderView.h; path = ../PAPlaceholder/PAPlaceholderView.h; sourceTree = "<group>"; };
-		92FB3C941875DC8D00DA5845 /* PAPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPlaceholderView.m; path = ../PAPlaceholder/PAPlaceholderView.m; sourceTree = "<group>"; };
-		92FB3C951875DC8D00DA5845 /* PAPlaceholderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PAPlaceholderViewController.h; path = ../PAPlaceholder/PAPlaceholderViewController.h; sourceTree = "<group>"; };
-		92FB3C961875DC8D00DA5845 /* PAPlaceholderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PAPlaceholderViewController.m; path = ../PAPlaceholder/PAPlaceholderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +157,10 @@
 		92FB3C921875DC7100DA5845 /* PAPlaceholder */ = {
 			isa = PBXGroup;
 			children = (
-				92FB3C931875DC8D00DA5845 /* PAPlaceholderView.h */,
-				92FB3C941875DC8D00DA5845 /* PAPlaceholderView.m */,
-				92FB3C951875DC8D00DA5845 /* PAPlaceholderViewController.h */,
-				92FB3C961875DC8D00DA5845 /* PAPlaceholderViewController.m */,
+				92F3CCB119056F7400A9EF3D /* PAPlaceholderView.h */,
+				92F3CCB219056F7400A9EF3D /* PAPlaceholderView.m */,
+				92F3CCB319056F7400A9EF3D /* PAPlaceholderViewController.h */,
+				92F3CCB419056F7400A9EF3D /* PAPlaceholderViewController.m */,
 			);
 			name = PAPlaceholder;
 			sourceTree = "<group>";
@@ -263,9 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92FB3C6B1875DBF000DA5845 /* AppDelegate.m in Sources */,
-				92FB3C971875DC8D00DA5845 /* PAPlaceholderView.m in Sources */,
 				92FB3C671875DBF000DA5845 /* main.m in Sources */,
-				92FB3C981875DC8D00DA5845 /* PAPlaceholderViewController.m in Sources */,
+				92F3CCB519056F7400A9EF3D /* PAPlaceholderView.m in Sources */,
+				92F3CCB619056F7400A9EF3D /* PAPlaceholderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
