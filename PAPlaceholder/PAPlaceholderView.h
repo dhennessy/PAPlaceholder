@@ -23,6 +23,7 @@
     XXLabel *_leftDim;
 }
 
+@property (nonatomic, assign) float dimensionInset;   // How far to inset dimension line (0.0 - 1.0), defaults to 0.1
 @property (readonly) XXLabel *titleLabel;
 @property (readonly) XXLabel *subtitleLabel;
 @property (readonly) XXColor *lineColor;

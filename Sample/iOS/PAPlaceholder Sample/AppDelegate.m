@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PAPlaceholderView.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,10 @@
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     splitViewController.delegate = (id)navigationController.topViewController;
+    
+    PAPlaceholderView *view = (PAPlaceholderView *)navigationController.topViewController.view;
+    view.dimensionInset = 0.9;
+    
     return YES;
 }
 							

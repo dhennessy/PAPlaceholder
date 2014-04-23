@@ -30,6 +30,7 @@
 }
 
 - (void)sharedInit {
+    _dimensionInset = 0.1;
     CGRect frame = self.frame;
     self.backgroundColor = [XXColor colorWithRed:0.227 green:0.286 blue:0.396 alpha:1.0];
     _lineColor = [XXColor colorWithRed:0.675 green:0.808 blue:0.863 alpha:1.0];
@@ -73,13 +74,22 @@
 #endif
 }
 
+- (void)setDimensionInset:(float)dimensionInset {
+    _dimensionInset = dimensionInset;
+#if TARGET_OS_IPHONE
+    [self setNeedsLayout];
+#else
+    [self setNeedsLayout:YES];
+#endif
+}
+
 #if TARGET_OS_IPHONE
 - (void)layoutSubviews {
     [super layoutSubviews];
 
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
-    NSInteger dimInset = MIN(width, height) * 0.1;
+    NSInteger dimInset = MIN(width, height) * _dimensionInset;
     _topDim.frame = CGRectMake(0, dimInset, width, DIM_HEIGHT);
     _topDim.text = [NSString stringWithFormat:@"%.f", width];
     _leftDim.frame = CGRectMake(dimInset+4, (height+DIM_HEIGHT)/2, width-dimInset-4, DIM_HEIGHT);
@@ -94,7 +104,7 @@
     
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
-    NSInteger dimInset = MIN(width, height) * 0.1;
+    NSInteger dimInset = MIN(width, height) * _dimensionInset;
     _topDim.frame = CGRectMake(0, dimInset, width, DIM_HEIGHT);
     _topDim.stringValue = [NSString stringWithFormat:@"%.f", width];
     _leftDim.frame = CGRectMake(dimInset+4, (height+DIM_HEIGHT)/2, width-dimInset-4, DIM_HEIGHT);
@@ -144,8 +154,8 @@
     }
     
     CGContextSetShouldAntialias(ctx, YES);
-    CGFloat dimInset = floorf(MIN(width, height) * 0.1) + 0.5;
-    CGFloat arrowDepth = dimInset *.3;
+    CGFloat dimInset = floorf(MIN(width, height) * _dimensionInset) + 0.5;
+    CGFloat arrowDepth = 10;
     CGContextSetStrokeColorWithColor(ctx, _lineColor.CGColor);
     CGContextSetLineWidth(ctx, 1);
     
